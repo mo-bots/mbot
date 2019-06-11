@@ -16,7 +16,7 @@ public class GameController {
 	GameService gameService;
 	
 	@PostMapping("/bot")
-	public GameOrder makeOrder(@RequestBody GameState gameState) {
+	public GameOrder entryPoint(@RequestBody GameState gameState) {
 		return gameService.getOrder(gameState);
 	}
 	

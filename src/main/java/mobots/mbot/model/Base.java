@@ -1,6 +1,6 @@
 package mobots.mbot.model;
 
-public class Base {
+public class Base implements UpdatableUnit {
 	
 	private Coordinates coordinates;
 	private int hp;
