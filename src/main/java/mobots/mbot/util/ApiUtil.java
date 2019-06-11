@@ -1,8 +1,8 @@
-package ncdc.bow.util;
+package mobots.mbot.util;
 
 import org.springframework.web.client.RestTemplate;
 
-import ncdc.bow.model.GameSettings;
+import mobots.mbot.model.GameSettings;
 
 public class ApiUtil {
 	

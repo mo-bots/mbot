@@ -1,4 +1,4 @@
-package ncdc.bow.service;
+package mobots.mbot.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,15 +7,15 @@ import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ncdc.bow.model.Action;
-import ncdc.bow.model.Coordinates;
-import ncdc.bow.model.GameOrder;
-import ncdc.bow.model.GameSettings;
-import ncdc.bow.model.GameState;
-import ncdc.bow.model.Player;
-import ncdc.bow.model.Unit;
-import ncdc.bow.util.ApiUtil;
-import ncdc.bow.util.PathFinderUtil;
+import mobots.mbot.model.Action;
+import mobots.mbot.model.Coordinates;
+import mobots.mbot.model.GameOrder;
+import mobots.mbot.model.GameSettings;
+import mobots.mbot.model.GameState;
+import mobots.mbot.model.Player;
+import mobots.mbot.model.Unit;
+import mobots.mbot.util.ApiUtil;
+import mobots.mbot.util.PathFinderUtil;
 
 @Service
 public class GameService {

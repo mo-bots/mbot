@@ -1,13 +1,13 @@
-package ncdc.bow.controller;
+package mobots.mbot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import ncdc.bow.model.GameOrder;
-import ncdc.bow.model.GameState;
-import ncdc.bow.service.GameService;
+import mobots.mbot.model.GameOrder;
+import mobots.mbot.model.GameState;
+import mobots.mbot.service.GameService;
 
 @RestController
 public class GameController {

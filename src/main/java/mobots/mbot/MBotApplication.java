@@ -1,13 +1,13 @@
-package ncdc.bow;
+package mobots.mbot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BowApplication {
+public class MBotApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BowApplication.class, args);
+		SpringApplication.run(MBotApplication.class, args);
 	}
 	
 }

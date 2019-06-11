@@ -1,4 +1,4 @@
-package ncdc.bow;
+package mobots.mbot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

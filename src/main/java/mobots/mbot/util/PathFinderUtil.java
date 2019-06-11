@@ -1,4 +1,4 @@
-package ncdc.bow.util;
+package mobots.mbot.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.newdawn.slick.util.pathfinding.AStarPathFinder;
 import org.newdawn.slick.util.pathfinding.Path;
 import org.springframework.stereotype.Component;
 
-import ncdc.bow.model.Coordinates;
-import ncdc.bow.model.Map;
+import mobots.mbot.model.Coordinates;
+import mobots.mbot.model.Map;
 
 @Component
 public class PathFinderUtil {

@@ -1,4 +1,4 @@
-package ncdc.bow.model;
+package mobots.mbot.model;
 
 public class Action {
 
