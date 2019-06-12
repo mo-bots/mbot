@@ -1,6 +1,7 @@
 package mobots.mbot.model;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class GameIndex {
     private final int tournamentId;
@@ -32,5 +33,13 @@ public class GameIndex {
     @Override
     public int hashCode() {
         return Objects.hash(tournamentId, gameId);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", GameIndex.class.getSimpleName() + "[", "]")
+                .add("tournamentId=" + tournamentId)
+                .add("gameId=" + gameId)
+                .toString();
     }
 }
