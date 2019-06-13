@@ -21,7 +21,8 @@ public class GameService {
 
 	public GameOrder getOrder(GameState gameState) {
 		Objects.requireNonNull(gameState);
-		final GameIndex gameIndex = new GameIndex(gameState.getTournamentId(), gameState.getGameId());
+		final int activePlayerId = gameState.getPlayer1().isActive()?gameState.getPlayer1().getId():gameState.getPlayer2().getId();
+		final GameIndex gameIndex = new GameIndex(gameState.getTournamentId(), gameState.getGameId(), String.valueOf(activePlayerId));
 
 		logger.info("Get order for game {}", gameIndex);
 		final GameDelegate gameDelegate = gameDelegateProvider.findOrCrateGameDelegate(gameIndex);

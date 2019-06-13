@@ -6,19 +6,12 @@ import java.util.StringJoiner;
 public class GameIndex {
     private final int tournamentId;
     private final int gameId;
+    private final String activePlayer;
 
-    public GameIndex(int tournamentId, int gameId) {
-
+    public GameIndex(int tournamentId, int gameId, String activePlayer) {
         this.tournamentId = tournamentId;
         this.gameId = gameId;
-    }
-
-    public int getTournamentId() {
-        return tournamentId;
-    }
-
-    public int getGameId() {
-        return gameId;
+        this.activePlayer =activePlayer;
     }
 
     @Override
@@ -27,19 +20,21 @@ public class GameIndex {
         if (!(o instanceof GameIndex)) return false;
         GameIndex gameIndex = (GameIndex) o;
         return tournamentId == gameIndex.tournamentId &&
-                gameId == gameIndex.gameId;
+                gameId == gameIndex.gameId &&
+                Objects.equals(activePlayer, gameIndex.activePlayer);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(tournamentId, gameId);
+        return Objects.hash(tournamentId, gameId, activePlayer);
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", GameIndex.class.getSimpleName() + "[", "]")
-                .add("tournamentId=" + tournamentId)
-                .add("gameId=" + gameId)
-                .toString();
+        return "GameIndex{" +
+                "tournamentId=" + tournamentId +
+                ", gameId=" + gameId +
+                ", activePlayer='" + activePlayer + '\'' +
+                '}';
     }
 }

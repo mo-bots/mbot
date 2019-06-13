@@ -1,6 +1,6 @@
 package mobots.mbot.model;
 
-public class Unit implements UpdatableUnit{
+public class Unit implements ActorUnit {
 
 	private int actionPoints;
 	private Coordinates coordinates;
@@ -9,11 +9,21 @@ public class Unit implements UpdatableUnit{
 	private boolean entrench;
 	private int hp;
 	private String id;
-	private String name;
+	private UnitName name;
 	private String owner;
 	private int rangeOfAttack;
 	
 	public Unit() {
+	}
+
+	@Override
+	public void accept(ActorVisitor visitor) {
+		name.accept(visitor,this);
+	}
+
+	@Override
+	public int getOrder() {
+		return name.getOrder();
 	}
 
 	public int getActionPoints() {
@@ -64,6 +74,7 @@ public class Unit implements UpdatableUnit{
 		this.hp = hp;
 	}
 
+	@Override
 	public String getId() {
 		return id;
 	}
@@ -72,11 +83,11 @@ public class Unit implements UpdatableUnit{
 		this.id = id;
 	}
 
-	public String getName() {
+	public UnitName getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(UnitName name) {
 		this.name = name;
 	}
 

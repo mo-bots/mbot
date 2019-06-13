@@ -20,15 +20,15 @@ public class GameDelegateProviderTest {
 
     @Test
     public void whenGetFirstGameOrderThenCreateOne() {
-        GameDelegate gameDelegate = gameDelegateProvider.findOrCrateGameDelegate(new GameIndex(1, 1));
+        GameDelegate gameDelegate = gameDelegateProvider.findOrCrateGameDelegate(new GameIndex(1, 1,"1"));
         assertNotNull(gameDelegate);
     }
 
     @Test
     public void whenGetTwoGameOrderThenReturnExisting() {
-        GameDelegate gameDelegate1 = gameDelegateProvider.findOrCrateGameDelegate(new GameIndex(0, 1));
+        GameDelegate gameDelegate1 = gameDelegateProvider.findOrCrateGameDelegate(new GameIndex(0, 1,"1"));
         assertNotNull(gameDelegate1);
-        GameDelegate gameDelegate2 = gameDelegateProvider.findOrCrateGameDelegate(new GameIndex(0, 1));
+        GameDelegate gameDelegate2 = gameDelegateProvider.findOrCrateGameDelegate(new GameIndex(0, 1,"1"));
         assertNotNull(gameDelegate2);
         assertEquals(gameDelegate1, gameDelegate2);
     }

@@ -1,6 +1,6 @@
 package mobots.mbot.model;
 
-public class Base implements UpdatableUnit {
+public class Base implements ActorUnit {
 	
 	private Coordinates coordinates;
 	private int hp;
@@ -9,6 +9,16 @@ public class Base implements UpdatableUnit {
 	private String owner;
 
 	public Base() {
+	}
+
+	@Override
+	public void accept(ActorVisitor visitor) {
+		visitor.visitBase(this);
+	}
+
+	@Override
+	public int getOrder() {
+		return Integer.MAX_VALUE;
 	}
 
 	public Coordinates getCoordinates() {
@@ -27,6 +37,7 @@ public class Base implements UpdatableUnit {
 		this.hp = hp;
 	}
 
+	@Override
 	public String getId() {
 		return id;
 	}

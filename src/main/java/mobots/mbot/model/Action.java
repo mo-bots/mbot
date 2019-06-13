@@ -2,24 +2,24 @@ package mobots.mbot.model;
 
 public class Action {
 
-	private String actionType;
+	private ActionType actionType;
 	private String id;
 	private String target;
 
 	public Action() {
 	}
 
-	public Action(String id, String actionType, String target) {
+	public Action(String id, ActionType actionType, String target) {
 		this.id = id;
 		this.actionType = actionType;
 		this.target = target;
 	}
 
-	public String getActionType() {
+	public ActionType getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(String actionType) {
+	public void setActionType(ActionType actionType) {
 		this.actionType = actionType;
 	}
 
