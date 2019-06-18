@@ -1,11 +1,11 @@
 package mobots.mbot.logic.context;
 
 import mobots.mbot.logic.context.state.ActorState;
-import mobots.mbot.model.ActorUnit;
+import mobots.mbot.model.Actor;
 
 import java.util.Optional;
 
-public abstract class ActorContext<T extends ActorUnit> {
+public abstract class ActorContext<T extends Actor> {
 
     private final String id;
     private final T actor;

@@ -75,15 +75,15 @@ public class GameDelegate {
 
     private void buildUnitStates() {
         actorStates.computeIfAbsent("B"+active.getBase().getId(), (id) -> this.computeUnitState(active.getBase()));
-        List<ActorUnit> currentUnits = new LinkedList<>(active.getUnits());
+        List<Actor> currentUnits = new LinkedList<>(active.getUnits());
         while (!currentUnits.isEmpty()) {
-            final ActorUnit unit = currentUnits.remove(0);
+            final Actor unit = currentUnits.remove(0);
             actorStates.computeIfAbsent("U"+unit.getId(), (id) -> this.computeUnitState(unit));
         }
 
     }
 
-    private ActorContext computeUnitState(ActorUnit unit) {
+    private ActorContext computeUnitState(Actor unit) {
         final ContextConstructorVisitor contextConstructorVisitor = new ContextConstructorVisitor();
         unit.accept(contextConstructorVisitor);
         return contextConstructorVisitor.getActorContext();

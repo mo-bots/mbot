@@ -1,6 +1,6 @@
 package mobots.mbot.model;
 
-public class Unit implements ActorUnit {
+public class Unit implements Actor {
 
 	private int actionPoints;
 	private Coordinates coordinates;

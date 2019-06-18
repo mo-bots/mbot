@@ -1,6 +1,6 @@
 package mobots.mbot.model;
 
-public interface ActorUnit {
+public interface Actor {
     void accept(ActorVisitor visitor);
 
     String getId();
